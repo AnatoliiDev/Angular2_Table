@@ -1,0 +1,13 @@
+
+<table class="table table-striped">
+    <tr *ngFor="let prod of prodArr" [style.color]="addClassRed(prod)" >
+        <td> {{prod.id}} </td>
+        <td> {{prod.name}} </td>
+        <td> {{prod.price}} </td> 
+        <td class="text-right">
+            <button (click)="delRow(prod)" class="btn btn-danger" >Delete</button>
+        </td>  
+    </tr>
+</table>
+    
+    
