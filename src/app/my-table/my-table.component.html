@@ -1,6 +1,6 @@
 
 <table class="table table-striped">
-    <tr *ngFor="let prod of prodArr" [style.color]="addClassRed(prod)" >
+    <tr *ngFor="let prod of prodArr" [style.color]="addTextRed(prod)" >
         <td> {{prod.id}} </td>
         <td> {{prod.name}} </td>
         <td> {{prod.price}} </td>
@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <td colspan="5">
-            <select name="Category">
+            <select name="Category" (change)="filter($event)">
                     <option disabled>Choose category</option>
                     <option value="Category 1">Category 1</option>
                     <option value="Category 2">Category 2</option>

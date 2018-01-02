@@ -29,21 +29,30 @@ export class MyTableComponent {
     prodArr: Product[];  
     visible: boolean = true;
     index: number;
+    safeProdArr: Product[];
 
     @Output()
     delete: EventEmitter<object> = new EventEmitter();;
 
     ngOnInit() {
         this.prodArr = this.ProductList.slice(0, +this.rows);
+        this.safeProdArr = this.prodArr;
     }    
 
     delRow(prod) {        
         this.index = this.prodArr.indexOf(prod);        
-        this.prodArr.splice(this.index, 1); 
+        this.prodArr.splice(this.index, 1);
         this.delete.emit(prod);                
     }
 
-    addClassRed(prod) {
+    addTextRed(prod) {
         if (prod.price > 500) return "red";
-    }    
+    }
+    
+    filter(temp) {       
+        this.prodArr = this.safeProdArr.filter((item)=>{
+            return item.Category == temp.target.value;
+        })
+        
+    }
 }
