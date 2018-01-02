@@ -3,11 +3,23 @@
     <tr *ngFor="let prod of prodArr" [style.color]="addClassRed(prod)" >
         <td> {{prod.id}} </td>
         <td> {{prod.name}} </td>
-        <td> {{prod.price}} </td> 
+        <td> {{prod.price}} </td>
+        <td> {{prod.Category}} </td> 
         <td class="text-right">
             <button (click)="delRow(prod)" class="btn btn-danger" >Delete</button>
         </td>  
     </tr>
+    <tr>
+        <td colspan="5">
+            <select name="Category">
+                    <option disabled>Choose category</option>
+                    <option value="Category 1">Category 1</option>
+                    <option value="Category 2">Category 2</option>
+                    <option value="Category 3">Category 3</option>
+            </select>
+        </td>
+    </tr>
 </table>
+
     
     
