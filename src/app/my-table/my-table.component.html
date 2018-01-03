@@ -1,21 +1,29 @@
 
 <table class="table table-striped">
-    <tr *ngFor="let prod of prodArr" [style.color]="addTextRed(prod)" >
-        <td> {{prod.id}} </td>
-        <td> {{prod.name}} </td>
-        <td> {{prod.price}} </td>
-        <td> {{prod.Category}} </td> 
+    <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Delete row</th>
+    </tr>
+    <tr *ngFor="let product of visibleProducts" [style.color]="addTextRed(product)" >
+        <td> {{product.id}} </td>
+        <td> {{product.name}} </td>
+        <td> {{product.price}} </td>
+        <td> {{product.Category}} </td> 
         <td class="text-right">
-            <button (click)="delRow(prod)" class="btn btn-danger" >Delete</button>
+            <button (click)="removeRow(product)" class="btn btn-danger" >Delete</button>
         </td>  
     </tr>
     <tr>
         <td colspan="5">
-            <select name="Category" (change)="filter($event)">
-                    <option disabled>Choose category</option>
+            <select name="Category" [(ngModel)]="nCategory">
+                    <option disabled >Choose category</option>
                     <option value="Category 1">Category 1</option>
                     <option value="Category 2">Category 2</option>
                     <option value="Category 3">Category 3</option>
+                    <option value="All Products">All Products</option>
             </select>
         </td>
     </tr>

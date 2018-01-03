@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { Product } from './my-table/product';
 import { MyTableComponent } from './my-table/my-table.component';
 import { MyTableHostComponent } from './my-table/my-table-host.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -18,7 +18,8 @@ import { MyTableHostComponent } from './my-table/my-table-host.component';
     
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule     
   ],
   providers: [],
   bootstrap: [AppComponent]
