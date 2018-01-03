@@ -5,19 +5,18 @@
             <th>Name</th>
             <th>Price</th>
             <th>Category</th>
-            <th>Delete row</th>
     </tr>
     <tr *ngFor="let product of visibleProducts" [style.color]="addTextRed(product)" >
         <td> {{product.id}} </td>
         <td> {{product.name}} </td>
         <td> {{product.price}} </td>
         <td> {{product.Category}} </td> 
-        <td class="text-right">
+        <td class="text-right clearBootstr">
             <button (click)="removeRow(product)" class="btn btn-danger" >Delete</button>
         </td>  
     </tr>
     <tr>
-        <td colspan="5">
+        <td colspan="4">
             <select name="Category" [(ngModel)]="nCategory">
                     <option disabled >Choose category</option>
                     <option value="Category 1">Category 1</option>

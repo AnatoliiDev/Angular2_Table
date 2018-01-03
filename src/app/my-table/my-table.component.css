@@ -5,8 +5,18 @@ table {
 }
 th, td {
     text-align: center;
-    border: 1px solid;
+    border: 1px solid black;
 }
+
+.clearBootstr {
+    border: none;
+    background-color: white;
+}
+
+th {
+    border-top: 1px solid black !important;
+}
+
 
 
 
