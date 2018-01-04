@@ -26,13 +26,14 @@ export class MyTableComponent {
     lastElem : number;
     productArr: Product[];
     rows: number;
-    nCategory = "All Products";
+    nCategory = "Category 1";
+    //nCategory = "All Products";
+    
+    hidden: boolean = false;
     
 
     @Output()
-    delete: EventEmitter<object> = new EventEmitter();;
-
-   
+    delete: EventEmitter<object> = new EventEmitter();   
 
     ngOnInit() {        
         this.productArr = Products;
@@ -44,10 +45,10 @@ export class MyTableComponent {
         let j: number = 0;
         let prod = [];
         while (i < this.lastElem && j < this.rows) {
-            if (this.productArr[i].visible && this.nCategory == "All Products") {
+            /* if (this.productArr[i].visible && this.nCategory == "All Products") {
                 prod[j] = this.productArr[i];
                 j++;
-            }
+            } */
             if (this.productArr[i].visible && this.nCategory == this.productArr[i].Category) {
                 prod[j] = this.productArr[i];
                 j++;
@@ -65,6 +66,16 @@ export class MyTableComponent {
 
     addTextRed(prod) {
         if (prod.price > 500) return "red";
+    }
+
+    addRow() {
+        this.hidden = true;
+        console.log("12345")
+    }
+
+    handleAddEvent(arg) {
+        this.productArr.push(arg);
+        this.lastElem++;
     }
 
     

@@ -7,6 +7,7 @@ import { Product } from './my-table/product';
 import { MyTableComponent } from './my-table/my-table.component';
 import { MyTableHostComponent } from './my-table/my-table-host.component';
 import { FormsModule } from '@angular/forms';
+import { AddRowComponent } from './my-table/add-row.component';
 
 
 
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     MyTableComponent,
-    MyTableHostComponent
+    MyTableHostComponent,
+    AddRowComponent
     
   ],
   imports: [

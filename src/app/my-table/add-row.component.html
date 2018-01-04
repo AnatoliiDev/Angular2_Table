@@ -1,0 +1,15 @@
+<button *ngIf="!isVisible" (click)="addNewData()">Add new data</button>
+<div *ngIf="isVisible">
+    <hr />
+    <p><span>ID: </span>{{newId + 1}}</p>
+    <p><span>Name: </span><input type="text" [(ngModel)]="newName"> </p>
+    <p><span>Price: </span><input type="text" [(ngModel)]="newPrice"> </p>
+    <p><span>Category: </span>
+    <select [(ngModel)]="newCategory">
+        <option value="Category 1">Category 1</option>
+        <option value="Category 2">Category 2</option>
+        <option value="Category 3">Category 3</option>
+    </select></p>
+    <button *ngIf="isVisible" (click)="sendNewData()">Send</button>
+</div>
+
