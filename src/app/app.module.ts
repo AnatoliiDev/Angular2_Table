@@ -10,14 +10,12 @@ import { FormsModule } from '@angular/forms';
 import { AddRowComponent } from './my-table/add-row.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     MyTableComponent,
     MyTableHostComponent,
-    AddRowComponent
-    
+    AddRowComponent    
   ],
   imports: [
     BrowserModule,
