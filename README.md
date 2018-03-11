@@ -12,7 +12,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Using the `ng serve --open` (or just `ng serve -o`) option will automatically open your browser on http://localhost:4200/.
 
 ## Usage
-
-Table as table! <br>
-Table as table! <br>
-Table as table! <br>
+<pre>
+Table as table! 
+                        Table as table! 
+            Table as table! 
+</pre>
